@@ -36,7 +36,8 @@ public class FilePartReader {
         String fileContent = this.read();
 
         List<String> fileContentList;
-        fileContentList = Stream.of(fileContent.split("\n")).collect(Collectors.toList());
+        fileContentList = Stream.of(fileContent.split("\n"))
+                .collect(Collectors.toList());
 
         for (int i = 0; i < fileContentList.size(); i++) {
             if (i < this.fromLine - 1 || i > this.toLine - 1) {
