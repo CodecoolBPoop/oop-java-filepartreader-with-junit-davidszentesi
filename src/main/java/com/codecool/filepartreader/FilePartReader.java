@@ -1,5 +1,7 @@
 package com.codecool.filepartreader;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,7 +21,9 @@ public class FilePartReader {
         this.toLine = 2;
     }
 
-    public void setup(String filePath, Integer fromLine, Integer toLine) {
+    public void setup(String filePath, Integer fromLine, Integer toLine) throws FileNotFoundException {
+        File fileToRead = new File(filePath);
+        if (!fileToRead.exists()) throw new FileNotFoundException("Haho!");
         if (toLine < fromLine) throw new IllegalArgumentException("Hey!");
         if (fromLine < 1) throw new IllegalArgumentException("Hey hey!");
         this.filePath = filePath;
