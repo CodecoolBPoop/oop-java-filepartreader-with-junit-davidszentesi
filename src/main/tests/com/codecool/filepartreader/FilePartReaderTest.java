@@ -3,10 +3,10 @@ package com.codecool.filepartreader;
 import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class FilePartReaderTest {
+
     private FilePartReader filePartReader = new FilePartReader();
     private String correctFilePath = "/Users/david/Documents/GitHub/oop-java-filepartreader-with-junit-davidszentesi/src/main/resources/content.txt";
 

@@ -1,6 +1,5 @@
 package com.codecool.filepartreader;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,5 +33,4 @@ public class FileWordAnalyzer {
                 .equals(new StringBuilder(string).reverse().toString().toLowerCase()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
-
 }
