@@ -23,9 +23,9 @@ public class FilePartReader {
 
     public void setup(String filePath, Integer fromLine, Integer toLine) throws FileNotFoundException {
         File fileToRead = new File(filePath);
-        if (!fileToRead.exists()) throw new FileNotFoundException("Haho!");
-        if (toLine < fromLine) throw new IllegalArgumentException("Hey!");
-        if (fromLine < 1) throw new IllegalArgumentException("Hey hey!");
+        if (!fileToRead.exists()) throw new FileNotFoundException("Hey!");
+        if (toLine < fromLine) throw new IllegalArgumentException("Hey hey!");
+        if (fromLine < 1) throw new IllegalArgumentException("Hey hey hey!");
         this.filePath = filePath;
         this.fromLine = fromLine;
         this.toLine = toLine;
